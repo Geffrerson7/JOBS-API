@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:14.7
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    command: "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=jobdb
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_HOST=db
+      - SECRET_KEY=django-insecure-^wa0-_2l2aw+@#pz5c8jgf8nd)vo$2m*pe-&0fte74!9po&ky&
+      - DEBUG=True
+    depends_on:
+      - db
