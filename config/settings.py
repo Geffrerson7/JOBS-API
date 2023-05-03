@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'rest_framework',
     "corsheaders",
     'rest_framework_simplejwt',
+    'django_filters',
     'user',
     'webPortal',
+    'job',
 ]
 
 MIDDLEWARE = [
@@ -145,7 +147,8 @@ REST_FRAMEWORK = {
         "rest_framework.throttling.ScopedRateThrottle",
     ],
     "DEFAULT_THROTTLE_RATES": {
-        "user-web-portal": "2000/day",
+        "web-portal": "3000/day",
+        "job": "3000/day"
     },
 }
 

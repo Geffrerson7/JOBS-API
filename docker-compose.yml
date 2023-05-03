@@ -24,5 +24,6 @@ services:
       - POSTGRES_HOST=db
       - SECRET_KEY=django-insecure-^wa0-_2l2aw+@#pz5c8jgf8nd)vo$2m*pe-&0fte74!9po&ky&
       - DEBUG=True
+      - JWT_SECRET=my_secret_key
     depends_on:
       - db

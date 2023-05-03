@@ -1,6 +1,6 @@
 from .serializer import WebPortalSerializer
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.permissions import IsAuthenticated
 from .pagination import StandardResultsSetPagination
 from .models import WebPortal
 
@@ -11,4 +11,4 @@ class WebPortalViewSet(viewsets.ModelViewSet):
     serializer_class = WebPortalSerializer
     pagination_class = StandardResultsSetPagination
     permission_classes = [IsAuthenticated]
-    throttle_scope = "user-web-portal"
+    throttle_scope = "web-portal"
