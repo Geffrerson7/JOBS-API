@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework_simplejwt',
     'user',
+    'webPortal',
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,12 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ), 
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.ScopedRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "user-web-portal": "2000/day",
+    },
 }
 
 SIMPLE_JWT = {
