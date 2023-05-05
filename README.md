@@ -5,7 +5,7 @@ API para monitorear tus postulaciones de trabajo.
 
 ## ERD
 
-![ERD-MOVIE](https://user-images.githubusercontent.com/61089189/230192360-7b052f0e-16ce-4a8c-a1d6-dc54f0cf8302.png)
+![JOB-API-ERD](https://user-images.githubusercontent.com/61089189/236380436-c082fe3b-4167-476e-99fb-addee4734068.png)
 
 ## Instalación local del proyecto
 
