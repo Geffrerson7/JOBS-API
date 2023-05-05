@@ -15,7 +15,7 @@ class JobViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     search_fields = ["company", "publicationDate", "portal_name"]
     throttle_scope = "job"
-
+    
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 

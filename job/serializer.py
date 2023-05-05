@@ -16,6 +16,7 @@ class JobSerializer(serializers.ModelSerializer):
             "name",
             "url",
             "company",
+            "modality",
             "webPortal",
             "applicationDate",
             "publicationDate",

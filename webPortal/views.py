@@ -12,3 +12,4 @@ class WebPortalViewSet(viewsets.ModelViewSet):
     pagination_class = StandardResultsSetPagination
     permission_classes = [IsAuthenticated]
     throttle_scope = "web-portal"
+    
