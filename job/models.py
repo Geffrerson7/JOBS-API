@@ -17,8 +17,9 @@ class Job(models.Model):
         WebPortal, on_delete=models.CASCADE, related_name="webPortal"
     )
     name = models.CharField(max_length=200)
-    url = models.URLField()
+    url = models.URLField(max_length=500)
     company = models.CharField(max_length=200)
+    modality = models.CharField(max_length=200)
     applicationDate = models.DateField(auto_now_add=True)
     publicationDate = models.DateField()
 
