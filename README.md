@@ -90,5 +90,9 @@ http://127.0.0.1:8000/
 * **Simple JWT** (v. 5.2.2) [Source](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
 * **drf-yasg** (v. 1.21.5) [Source](https://drf-yasg.readthedocs.io/en/stable/)
 
+## Enlace de la aplicación Frontend del proyecto
+
+[![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/Geffrerson7/JOBS-API-FRONTEND)
+
 ## Autor
 - [Gefferson Max Casasola Huamancusi](https://www.github.com/Geffrerson7)
