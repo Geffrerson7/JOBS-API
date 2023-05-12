@@ -5,7 +5,7 @@ API para monitorear tus postulaciones de trabajo.
 
 ## ERD
 
-![JOB-API-ERD](https://user-images.githubusercontent.com/61089189/236380436-c082fe3b-4167-476e-99fb-addee4734068.png)
+![ERD-JOB-API](https://github.com/Geffrerson7/JOBS-API/assets/61089189/3872c61c-23e5-49ee-9243-cfc73bdc57ed)
 
 ## Instalación local del proyecto
 
