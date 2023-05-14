@@ -6,10 +6,13 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 import jwt
 from django.conf import settings
 import datetime
+from .pagination import StandardResultsSetPagination
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    pagination_class = StandardResultsSetPagination
 
     def perform_create(self, serializer):
         return serializer.save(

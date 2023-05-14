@@ -7,7 +7,7 @@ from .models import WebPortal
 
 class WebPortalViewSet(viewsets.ModelViewSet):
 
-    queryset = WebPortal.objects.all()
+    queryset = WebPortal.objects.all().order_by("id")
     serializer_class = WebPortalSerializer
     pagination_class = StandardResultsSetPagination
     permission_classes = [IsAuthenticated]
