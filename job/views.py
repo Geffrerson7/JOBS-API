@@ -8,7 +8,7 @@ from .models import Job
 
 class JobViewSet(viewsets.ModelViewSet):
 
-    queryset = Job.objects.all()
+    queryset = Job.objects.all().order_by("id")
     serializer_class = JobSerializer
     pagination_class = StandardResultsSetPagination
     filter_backends = [filters.SearchFilter]
